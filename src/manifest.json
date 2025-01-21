@@ -1,51 +1,31 @@
-﻿{
-  "name": "John Doe Chrome",
-  "short_name": "Anonymize your browsing",
-  "description": "A Chrome extension to anonymize some of the data exposed by your browser",
-  "author": "Filippo Liverani",
-  "version": "5.3.1",
-  "manifest_version": 2,
-  "minimum_chrome_version": "38",
-  "homepage_url": "http://github.com/filippo-liverani/john-doe-chrome",
-  "icons": {
-    "128": "images/large.png",
-    "48": "images/medium.png",
-    "32": "images/small.png"
-  },
-  "browser_action": {
-    "default_icon": "images/small.png",
-    "default_popup": "html/popup.html"
-  },
-  "background": {
-    "scripts": [
-      "js/background.js",
-      "js/cookies-to-remove.js",
-      "js/update-headers.js",
-      "js/update-url.js"
-    ],
-    "persistent": true
-  },
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Refresh Extension OneAbir",
+  "description": "the extension owner @Fix_Trad",
+  "version": "3.4",
+  "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": [
-        "js/content.js",
-        "js/update-content.js"
+      "matches": [
+        "https://*.qxbroker.com/*"
       ],
-      "run_at": "document_start",
-      "all_frames": true
+      "js": [
+        "background.js"
+      ]
     }
   ],
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "OneAbir",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": [
-    "alarms",
-    "browsingData",
-    "cookies",
-    "http://*/*",
-    "https://*/*",
-    "privacy",
-    "storage",
-    "tabs",
-    "webRequest",
-    "webRequestBlocking"
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.contafakeiq.online/*"
   ]
 }
