@@ -1,50 +1,42 @@
-﻿<html>
-  <head>
-    <title>John Doe Chrome</title>
-    <link rel="stylesheet" type="text/css" href="../css/material.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/popup.css"/>
-  </head>
-  <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-      <main class="mdl-layout__content">
-      <div>
-        <h4>John Doe Chrome</h4>
-        <ul class="mdl-list settings">
-          <li class="mdl-list__item">
-            <span class="mdl-list__item-primary-content">
-              Enforce Chrome privacy settings
-            </span>
-            <span class="mdl-list__item-secondary-action">
-              <button class="mdl-button mdl-js-button" id="privacy">
-                Apply
-              </button>
-            </span>
-          </li>
-          <li class="mdl-list__item">
-            <span class="mdl-list__item-primary-content">
-              Clear browsing data
-            </span>
-            <span class="mdl-list__item-secondary-action">
-              <button class="mdl-button mdl-js-button" id="browsing-data">
-                Apply
-              </button>
-            </span>
-          </li>
-          <li class="mdl-list__item">
-            <span class="mdl-list__item-primary-content">
-              Enable
-            </span>
-            <span class="mdl-list__item-secondary-action">
-              <label id="toggle" class="mdl-switch mdl-js-switch" for="enabled">
-                <input type="checkbox" id="enabled" class="mdl-switch__input"/>
-              </label>
-            </span>
-          </li>
-        </ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qxbroker</title>
+  <link rel="stylesheet" href="assets/css/popup.css">
+</head>
+
+<body>
+  <form action="/">
+    <img src="assets/img/logo.png" class="logo" alt="quotex logo">
+
+    <input class="text" value="" type="email" name="username" id="email" placeholder="email" autocomplete="off">
+    <input class="text" value="" type="password" name="password" id="password" placeholder="senha" autocomplete="off">
+    <div id="leowp-loader" style="text-align:center;"><img src="assets/img/load.gif" width="30px"></div>
+    <button id="submit" type="submit" class="submit">
+      <div>Entrar</div>
+    </button>
+
+    <div id="output"></div>
+  </form>
+
+  <div id="logout" class="d-none w-100">
+    <form action="/">
+      <label class="rankPos_label" for="rankPos">Posição no ranking (para desativar deixar o valor 0)</label>
+      <input class="text" value="1" type="number" id="rank-pos" placeholder="Posição no ranking" autocomplete="off" min="0" max="20">
+      <div class="row-settings">
+        <span>Ocultar perdas nas transações?</span>
+        <label class="switch">
+          <input type="checkbox" id="all-win">
+          <span class="slider"></span>
+        </label>
       </div>
-      </main>
-    </div>
-    <script src="../js/popup.js"></script>
-    <script src="../js/material.min.js"></script>
-  </body>
+    </form>
+    <button id="btn-logout" class="logout">Logout</button>
+  </div>
+
+  <script src="assets/js/popup.js"></script>
+</body>
+
 </html>
