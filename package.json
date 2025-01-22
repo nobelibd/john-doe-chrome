@@ -1,17 +1,19 @@
 {
-  "name": "john-doe-chrome",
-  "version": "5.3.1",
-  "description": "A Chrome extension to anonymize some of the data exposed by your browser",
-  "repository": "git@github.com:filippo-liverani/john-doe-chrome.git",
-  "author": "Filippo Liverani",
+  "name": "extensao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "João Lucas <77590858+dev-stupid-codes@users.noreply.github.com>",
   "license": "MIT",
-  "devDependencies": {
-    "chai": "4.1.2",
-    "jsdom": "9.12.0",
-    "mocha": "3.5.1"
-  },
   "scripts": {
-    "test": "mocha --reporter spec test/**",
-    "package": "zip -r john-doe-chrome-$(node -e \"console.log(require('./package.json').version)\").zip src"
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "rimraf": "^3.0.2",
+    "vinyl-sourcemaps-apply": "^0.2.1"
   }
 }
